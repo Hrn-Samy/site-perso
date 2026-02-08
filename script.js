@@ -33,3 +33,33 @@ if (burger && menu) {
     });
   });
 }
+
+/* ===== Fun Zone ===== */
+
+let clicks = 0;
+function clickCounter(){
+  clicks++;
+  document.getElementById("clicks").textContent = clicks;
+}
+
+function updateClock(){
+  const now = new Date();
+  document.getElementById("clock").textContent =
+    now.toLocaleTimeString();
+}
+setInterval(updateClock,1000);
+updateClock();
+
+function randomMsg(){
+  const msgs = [
+    "Continue d'avancer",
+    "Reste discipliné",
+    "Travaille en silence",
+    "Le futur se construit aujourd'hui",
+    "Rien n'est impossible"
+  ];
+  document.getElementById("msg").textContent =
+    msgs[Math.floor(Math.random()*msgs.length)];
+}
+
+
