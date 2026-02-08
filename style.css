@@ -248,3 +248,29 @@ input:focus, textarea:focus{ border-color: rgba(124,92,255,.6); }
     visibility:hidden;
   }
 }
+/* ===== STATS ===== */
+.stats{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:16px;
+}
+.stat{
+  text-align:center;
+  font-size:22px;
+}
+
+/* ===== SKILLS ===== */
+.skill{
+  text-align:center;
+  font-weight:700;
+  font-size:18px;
+}
+
+/* Responsive */
+@media(max-width:900px){
+  .stats{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
