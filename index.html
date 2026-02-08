@@ -1,111 +1,293 @@
 <!doctype html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Haroun Samy</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haroun Samy — Site perso</title>
+  <meta name="description" content="Site perso de Haroun Samy : à propos, projets, fun, contact" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-<!-- INTRO -->
-<div id="intro">
-  <h1 class="intro-title">Haroun Samy</h1>
-</div>
-
-<header class="header">
-  <nav class="nav container">
-    <a class="logo" href="#">Samy</a>
-    <div class="links">
-      <a href="index.html">Accueil</a>
-      <a href="about.html">À propos</a>
-      <a href="projects.html">Projets</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section class="hero container">
-  <div class="hero-text">
-    <h1>Bienvenue sur mon univers</h1>
-    <p>Étudiant en terminale — passionné par le web, le sport et le progrès</p>
-    <a class="btn" href="#explore">Explorer</a>
+  <!-- Intro -->
+  <div id="intro">
+    <h1 class="intro-title">Haroun Samy</h1>
   </div>
-</section>
 
-<!-- STATS -->
-<section class="section container stats">
-  <div class="card stat"><h2>17</h2><p>Âge</p></div>
-  <div class="card stat"><h2>Mantes</h2><p>Ville</p></div>
-  <div class="card stat"><h2>Terminale</h2><p>Niveau</p></div>
-  <div class="card stat"><h2>2026</h2><p>Objectif</p></div>
-</section>
+  <header class="header">
+    <nav class="nav container">
+      <a class="logo" href="#top">Samy</a>
 
-<!-- SKILLS -->
-<section class="section container" id="explore">
-<h2>Compétences</h2>
+      <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-<div class="cards">
-  <div class="card skill">HTML</div>
-  <div class="card skill">CSS</div>
-  <div class="card skill">JavaScript</div>
-  <div class="card skill">Analyse</div>
-  <div class="card skill">Commentaire</div>
-  <div class="card skill">Illustration</div>
-</div>
-</section>
+      <div class="links" data-menu>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#fun">Fun</a>
+        <a href="#contact" class="btn btn-sm">Contact</a>
+      </div>
+    </nav>
+  </header>
 
-<!-- PROJECTS PREVIEW -->
-<section class="section container">
-<h2>Mes projets</h2>
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container hero-big">
+      <div class="hero-text">
+        <p class="pill">Site perso</p>
+        <h1>
+          Salut, moi c’est <span class="accent">Haroun Samy</span>
+        </h1>
+        <p class="lead">
+          17 ans, terminale, Mantes-la-Jolie  
+          Sport, foot, console et envie de progresser tous les jours
+        </p>
 
-<div class="cards">
-  <div class="card">Site perso en ligne</div>
-  <div class="card">Suivi sport & foot</div>
-  <div class="card">Planner terminale</div>
-</div>
-</section>
+        <div class="hero-cta">
+          <a class="btn" href="#projects">Voir mes projets</a>
+          <a class="btn btn-ghost" href="#fun">Fun zone</a>
+        </div>
 
-<!-- FUN ZONE -->
-<section class="section container">
-<h2>Fun zone</h2>
+        <div class="hero-meta">
+          <span>📍 Mantes-la-Jolie</span>
+          <span>🎓 Terminale</span>
+          <span>📫 <a class="link" href="mailto:samy.haroun78@gmail.com">samy.haroun78@gmail.com</a></span>
+        </div>
+      </div>
 
-<div class="cards">
+      <div class="hero-card">
+        <div class="card big-card">
+          <h2>En bref</h2>
+          <ul class="clean-list">
+            <li>⭐ Sociable</li>
+            <li>🧠 Spécialité : analyse</li>
+            <li>✍️ Je sais commenter et illustrer</li>
+            <li>🚀 Objectif : m’améliorer</li>
+          </ul>
 
-<div class="card">
-<h3>Compteur de clics</h3>
-<button class="btn" onclick="clickCounter()">Clique</button>
-<p id="clicks">0</p>
-</div>
+          <div class="mini-stats">
+            <div class="mini">
+              <div class="mini-n">17</div>
+              <div class="mini-t">âge</div>
+            </div>
+            <div class="mini">
+              <div class="mini-n">Mantes</div>
+              <div class="mini-t">ville</div>
+            </div>
+            <div class="mini">
+              <div class="mini-n">Tle</div>
+              <div class="mini-t">niveau</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Heure en direct</h3>
-<p id="clock"></p>
-</div>
+    <!-- About -->
+    <section id="about" class="section container">
+      <div class="section-head">
+        <h2>À propos</h2>
+        <p>Simple, clair, sans blabla</p>
+      </div>
 
-<div class="card">
-<h3>Message aléatoire</h3>
-<button class="btn" onclick="randomMsg()">Inspire-moi</button>
-<p id="msg"></p>
-</div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Qui je suis</h3>
+          <p>
+            Je m’appelle Haroun Samy, j’ai 17 ans et je suis en terminale à Mantes-la-Jolie  
+            J’aime sortir, manger, jouer à la console, faire du sport et surtout jouer au foot  
+            J’aime aussi apprendre et progresser
+          </p>
+        </div>
 
-</div>
-</section>
+        <div class="card">
+          <h3>Ce que je kiffe</h3>
+          <div class="tags">
+            <span class="tag">Foot</span>
+            <span class="tag">Sport</span>
+            <span class="tag">Console</span>
+            <span class="tag">Sorties</span>
+            <span class="tag">Bouffe</span>
+            <span class="tag">Apprendre</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<!-- CONTACT CTA -->
-<section class="section container">
-<h2>Restons connectés</h2>
-<a class="btn" href="contact.html">Me contacter</a>
-</section>
+    <!-- Skills -->
+    <section id="skills" class="section container">
+      <div class="section-head">
+        <h2>Compétences</h2>
+        <p>Ce que je bosse en ce moment</p>
+      </div>
 
-<footer class="footer">
-<div class="container footer-inner">
-<span>© <span id="year"></span> Haroun Samy</span>
-</div>
-</footer>
+      <div class="cards cards-4">
+        <article class="card">
+          <h3>HTML</h3>
+          <p class="muted">Structure propre</p>
+        </article>
+        <article class="card">
+          <h3>CSS</h3>
+          <p class="muted">Design clean</p>
+        </article>
+        <article class="card">
+          <h3>JavaScript</h3>
+          <p class="muted">Interactivité</p>
+        </article>
+        <article class="card">
+          <h3>Analyse</h3>
+          <p class="muted">Comprendre, améliorer</p>
+        </article>
+      </div>
 
-<script src="script.js"></script>
+      <div class="card progress-card">
+        <h3>Progression</h3>
+        <div class="progress">
+          <div class="progress-row">
+            <span>HTML</span>
+            <div class="bar"><div class="fill" style="width:70%"></div></div>
+            <span class="pct">70%</span>
+          </div>
+          <div class="progress-row">
+            <span>CSS</span>
+            <div class="bar"><div class="fill" style="width:60%"></div></div>
+            <span class="pct">60%</span>
+          </div>
+          <div class="progress-row">
+            <span>JS</span>
+            <div class="bar"><div class="fill" style="width:45%"></div></div>
+            <span class="pct">45%</span>
+          </div>
+        </div>
+        <p class="hint">On peut ajuster les % quand tu veux</p>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <h2>Projets</h2>
+        <p>Idées cool à construire</p>
+      </div>
+
+      <div class="cards cards-3">
+        <article class="card project">
+          <div class="project-top">
+            <h3>Site perso (ce site)</h3>
+            <span class="badge">2026</span>
+          </div>
+          <p class="muted">Une base propre, évolutive, avec des pages et du contenu</p>
+          <div class="project-actions">
+            <a class="link" href="https://hrn-samy.github.io/site-perso/" target="_blank" rel="noreferrer">Démo</a>
+            <a class="link" href="https://github.com/HRN-sami/site-perso" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project-top">
+            <h3>Tracker sport & foot</h3>
+            <span class="badge">à venir</span>
+          </div>
+          <p class="muted">Suivre tes séances, objectifs, stats et progression</p>
+          <div class="project-actions">
+            <a class="link" href="#" onclick="alert('Bientôt dispo'); return false;">Démo</a>
+            <a class="link" href="#" onclick="alert('Bientôt dispo'); return false;">Code</a>
+          </div>
+        </article>
+
+        <article class="card project">
+          <div class="project-top">
+            <h3>Planner terminale</h3>
+            <span class="badge">à venir</span>
+          </div>
+          <p class="muted">Organisation révisions devoirs objectifs sans prise de tête</p>
+          <div class="project-actions">
+            <a class="link" href="#" onclick="alert('Bientôt dispo'); return false;">Démo</a>
+            <a class="link" href="#" onclick="alert('Bientôt dispo'); return false;">Code</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Fun -->
+    <section id="fun" class="section container">
+      <div class="section-head">
+        <h2>Fun zone</h2>
+        <p>Un peu d’interactif</p>
+      </div>
+
+      <div class="cards cards-3">
+        <article class="card">
+          <h3>Compteur de clics</h3>
+          <p class="muted">Juste pour le fun</p>
+          <button class="btn btn-sm" type="button" onclick="clickCounter()">Clique</button>
+          <div class="big-number" id="clicks">0</div>
+        </article>
+
+        <article class="card">
+          <h3>Heure en direct</h3>
+          <p class="muted">Horloge locale</p>
+          <div class="big-number" id="clock">--:--:--</div>
+        </article>
+
+        <article class="card">
+          <h3>Message aléatoire</h3>
+          <p class="muted">Petit boost</p>
+          <button class="btn btn-sm" type="button" onclick="randomMsg()">Inspire moi</button>
+          <p class="quote" id="msg">Clique pour un message</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section container">
+      <div class="section-head">
+        <h2>Contact</h2>
+        <p>On reste connectés</p>
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h3>Me joindre</h3>
+          <p class="muted">
+            Email :
+            <a class="link" href="mailto:samy.haroun78@gmail.com">samy.haroun78@gmail.com</a><br>
+            Instagram :
+            <a class="link" href="https://instagram.com/EIKICHI-tierdubas7GT" target="_blank" rel="noreferrer">@EIKICHI-tierdubas7GT</a><br>
+            GitHub :
+            <a class="link" href="https://github.com/HRN-sami" target="_blank" rel="noreferrer">HRN-sami</a>
+          </p>
+          <a class="btn" href="contact.html">Page contact</a>
+        </div>
+
+        <form class="card form" onsubmit="return false">
+          <h3>Message rapide</h3>
+          <label>
+            Nom
+            <input type="text" placeholder="Ton nom">
+          </label>
+          <label>
+            Message
+            <textarea rows="4" placeholder="Hello..."></textarea>
+          </label>
+          <button class="btn" type="button" onclick="alert('Pour envoyer vraiment, on branchera Formspree ou Netlify Forms');">
+            Envoyer
+          </button>
+          <p class="hint">On peut activer un vrai envoi en 2 minutes</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Haroun Samy</span>
+      <a class="link" href="#top">Retour en haut</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
