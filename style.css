@@ -201,3 +201,47 @@ input:focus, textarea:focus{ border-color: rgba(124,92,255,.6); }
   }
   .links.open{ display:flex; }
 }
+
+/* ===== Intro Animation ===== */
+
+#intro{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(135deg,#0b0f19,#111a33);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  animation:introFade 1s ease forwards;
+  animation-delay:2.2s;
+}
+
+.intro-title{
+  font-size: clamp(36px,6vw,72px);
+  font-weight:900;
+  letter-spacing:1px;
+  background:linear-gradient(90deg,#7c5cff,#2ee59d);
+  -webkit-background-clip:text;
+  color:transparent;
+  opacity:0;
+  transform:translateY(20px);
+  animation:titleUp 1s ease forwards;
+}
+
+/* Texte qui monte */
+@keyframes titleUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* Disparition écran */
+@keyframes introFade{
+  to{
+    opacity:0;
+    visibility:hidden;
+  }
+}
+
+
